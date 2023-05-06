@@ -20,7 +20,7 @@ after_success:
 
   - docker tag udagram-api-feed "$DOCKER_USERNAME/udagram-api-feed:latest"
 
-  - docker tag reverseproxy "$DOCKER_USERNAME/udagram-reverseproxy:latest"
+  - docker tag reverseproxy "$DOCKER_USERNAME/reverseproxy:latest"
 
   - docker tag udagram-frontend "$DOCKER_USERNAME/udagram-frontend:local"
 
