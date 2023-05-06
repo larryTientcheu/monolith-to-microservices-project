@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-  - 18
+node_js: "stable"
 
 services:
   - docker
@@ -17,7 +16,14 @@ script:
   - docker-compose up
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker tag udagram-api-feed "$DOCKER_USERNAME/udagram-api-feed:latest"
   - docker push "$DOCKER_USERNAME/udagram-api-feed"
+
+  - docker tag udagram-api-user "$DOCKER_USERNAME/udagram-api-user:latest"
   - docker push "$DOCKER_USERNAME/udagram-api-user"
+
+  - docker tag udagram-reverseproxy "$DOCKER_USERNAME/udagram-reverseproxy:latest"
   - docker push "$DOCKER_USERNAME/udagram-reverseproxy"
+
+  - docker tag udagram-frontend "$DOCKER_USERNAME/udagram-frontend:local"
   - docker push "$DOCKER_USERNAME/udagram-frontend"
