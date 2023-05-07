@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: reverseproxy
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: reverseproxy
@@ -18,7 +18,7 @@ spec:
         imagePullPolicy: Always
         resources:
           limits:
-            memory: "128Mi"
+            memory: "64Mi"
             cpu: "250m"
         ports:
         - containerPort: 80

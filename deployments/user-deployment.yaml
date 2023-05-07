@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: user-api
+  name: backend-user
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: user-api
+      app: backend-user
   template:
     metadata:
       labels:
-        app: user-api
+        app: backend-user
     spec:
       containers:
-      - name: user-api
+      - name: backend-user
         image: ngaleuj/udagram-api-user:latest
         imagePullPolicy: Always
         resources:
