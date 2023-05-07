@@ -30,12 +30,14 @@ plugins/ios.json
 $RECYCLE.BIN/
 postgres_dev/
 logfile
-
+env-*.yaml
+aws-secret.yaml
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
 node_modules
 venv/
+set_env.sh
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
