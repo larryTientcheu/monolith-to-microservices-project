@@ -30,7 +30,8 @@ plugins/ios.json
 $RECYCLE.BIN/
 postgres_dev/
 logfile
-
+env-*.yaml
+aws-secret.yaml
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
